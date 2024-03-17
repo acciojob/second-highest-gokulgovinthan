@@ -19,7 +19,13 @@
 			for (var i = 0; i < n; i++) {
 				arr[i] = prompt("Enter element " + (i+1));
 			}
-			alert(secondHighest(arr));
+			  if(arr.length===0 || arr.length===arr.reduce((p,e)=>p+e)){
+				return -Infinity
+			}
+			
+			arr.sort();
+			
+			alert(secondHighest(arr[1]));
 		}
 		Main();
 	</script>
